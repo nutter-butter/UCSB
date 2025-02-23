@@ -5,17 +5,23 @@ public class Movie {
     String director;
     String protag; //Actor of lead role
     int time; //Time in seconds
-    String rating; //Rating from 0-5
+    String rating;
+    String description;
+    String type;
     
-    public Movie(String movieName, String director, String protag, String rating, int time)
+    public Movie(String movieName, String type, String director, String protag, String rating, int time, String description)
     {
         this.movieName = movieName;
         this.director = director;
         this.protag = protag;
         this.rating = rating;
         this.time = time;
+        this.type = type;
     }
 
+    public String getDescription() {
+        return description;
+    }
     public String getMovieName() {
         return movieName;
     }
@@ -27,7 +33,9 @@ public class Movie {
     public String getProtag() {
         return protag;
     }
-
+    public String getType() {
+        return type;
+    }
     public int getTime() {
         return time;
     }
