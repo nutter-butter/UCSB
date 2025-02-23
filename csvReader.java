@@ -1,9 +1,10 @@
+package backend;
 import java.io.*;
 import java.util.ArrayList;
 
 public class csvReader {
-    String path;
-    int col;
+    private String path;
+    private int col;
 
     public csvReader(String path, int col) {
         this.path = path;

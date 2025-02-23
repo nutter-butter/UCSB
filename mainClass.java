@@ -1,10 +1,11 @@
+package backend;
 import java.util.*;
 
 public class mainClass 
 {
     public static void main(String[] args) 
     {
-        String data = "netflix_titles.csv";
+        String data = "backend/netflix_titles.csv";
 
         csvReader titles = new csvReader(data, 2);
         ArrayList<String> titlesList = titles.getColumn();
@@ -28,7 +29,6 @@ public class mainClass
         csvReader protags = new csvReader(data, 4);
         ArrayList<String> protagsL =  protags.getColumn();
         ArrayList<String> protagsList = protags.createList(protagsL);
-
 
         Scanner scanner = new Scanner(System.in);
         ArrayList<Movie> withSameType = new ArrayList<>();
@@ -83,6 +83,7 @@ public class mainClass
             {
                 System.out.print("Your movie could not be found on the database");
             }
+            scanner.close();
     } 
     else
     {

@@ -1,3 +1,4 @@
+package backend;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,9 +14,8 @@ public class dataAlgorithm
 
         String bestDirector = input.getDirector(); // 4pt
         String bestCountry = input.getCountry(); // 2pt
-        String bestType = input.getType(); // 3pt
         String bestProtag = input.getProtag(); // 3pt
-        String bestRating = input.getProtag(); // 5pt
+        String bestRating = input.getRating(); // 5pt
 
 
         for(int i = 0; i < list.size(); i++)
@@ -29,17 +29,13 @@ public class dataAlgorithm
             {
                 score += 2;
             }
-            if(list.get(i).getType().equals(bestType))
+            if(list.get(i).getRating().equals(bestRating))
             {
                 score += 3;
             }
             if(list.get(i).getProtag().equals(bestProtag))
             {
                 score += 4;
-            }
-            if(list.get(i).getRating().equals(bestRating))
-            {
-                score += 5;
             }
             name = list.get(i).getMovieName();
             nameMapScore.put(name, score);

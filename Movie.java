@@ -1,11 +1,13 @@
+package backend;
+
 public class Movie 
 {
-    String movieName;
-    String director;
-    String protag; //Actor of lead role
-    String rating;
-    String description;
-    String country;
+    private String movieName;
+    private String director;
+    private String protag; //Actor of lead role
+    private String rating;
+    private String description;
+    private String country;
     
     public Movie(String movieName, String country, String rating, String director, String protag, String description)
     {
