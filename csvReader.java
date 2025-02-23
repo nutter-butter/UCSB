@@ -31,19 +31,7 @@ public class csvReader {
 
         return list;
     }
-/*
-    String test = protagsL.get(2);
-        String fixed = "";
-        for(int i = 0; i < test.length(); i++)
-        {
-            if(test.charAt(i) != ',') {
-                fixed += test.charAt(i);
-            }
-            else {
-                break;
-            }
-        }
- */
+
     public ArrayList<String> createList(ArrayList<String> arr) {
         ArrayList<String> list = new ArrayList<>();
         for(int i = 0; i < arr.size(); i++) {
