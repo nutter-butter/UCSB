@@ -2,7 +2,6 @@ import java.util.ArrayList;
 
 public class mainClass {
     public static void main(String[] args) {
-        String imdbRatings = "netflix_imdb.csv";
         String data = "netflix_titles.csv";
 
         csvReader titles = new csvReader(data, 2);
@@ -15,10 +14,16 @@ public class mainClass {
         ArrayList<String> ratingsList = ratings.getColumn();
         csvReader duration = new csvReader(data, 9);
         ArrayList<String> durationList = duration.getColumn();
+        csvReader descriptions = new csvReader(data, 11);
+        ArrayList<String> descsList = descriptions.getColumn();
+        csvReader protags = new csvReader(data, 4);
+        ArrayList<String> protagsL =  protags.getColumn();
+        //ArrayList<String> protagsList = protags.getColumn(protagsL);
+        csvReader types = new csvReader(data, 1);
+        ArrayList<String> typesList = types.getColumn();
 
-        for(String s : durationList) {
-            System.out.println(s);
-        }
+        System.out.println("Cast: " + protagsL.get(2));
+
     } 
 }
 
