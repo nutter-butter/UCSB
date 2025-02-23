@@ -20,6 +20,32 @@
                     </ul>
                 </div>
             </nav>
+            <p>Since you like My Little Pony: Friendship Is Magic,</p>
+            <div class = "numOne">
+                <h1>#1</h1>
+                <h2 class = "toggle-header">My Little Pony: Something</h1>
+                <div class = "toggle-content">
+                    <p>Journey to the enchanted land of Equestria, where unicorn Twilight Sparkle and her pals have adventures and learn valuable lessons about friendship.</p>
+                </div>
+            </div>
+            <div class = "numTwo">
+                <h1>#2</h1>
+                <h2 class = "toggle-header">My Little Pony: Someone</h2>
+                <div class = "toggle-content">
+                    <p>What the sigma what the sigma what the sigma what the sigma what the sigma what the sigma what the sigma what the sigma what the sigma what the sigma.</p>
+                </div>
+            </div>
         </section>
     </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const header = document.querySelector(".toggle-header");
+        const content = document.querySelector(".toggle-content");
+
+        header.addEventListener("click", function () {
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        });
+        });
+    </script>
 </html>
