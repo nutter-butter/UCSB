@@ -1,8 +1,5 @@
-package backend;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+import java.util.*;
 
 public class dataAlgorithm 
 {
@@ -36,6 +33,10 @@ public class dataAlgorithm
             if(list.get(i).getProtag().equals(bestProtag))
             {
                 score += 4;
+            }
+            if(methods.checkIfSeries(input.getMovieName(), list.get(i).getMovieName()))
+            {
+                score +=6;
             }
             name = list.get(i).getMovieName();
             nameMapScore.put(name, score);

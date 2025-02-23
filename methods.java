@@ -1,24 +1,8 @@
-package backend;
+
 
 import java.util.ArrayList;
 
 public class methods {
-
-    public static ArrayList<Double> stringToInt(ArrayList<String> ratingAsString) {
-        ArrayList<Double> ratings = new ArrayList<>();
-        for (int i = 0; i < ratingAsString.size(); i++) {
-    
-            try {
-                // Attempt to parse the string as a double
-                double x = Double.parseDouble(ratingAsString.get(i));
-                ratings.add(x);
-            } catch (NumberFormatException e) {
-                // If it fails to parse, print an error message and continue
-                i--;
-            }
-        }
-        return ratings;
-    }
 
     public static boolean inDatabase(String input, ArrayList<Movie> list) {
         String inputLower = input.toLowerCase();
@@ -34,7 +18,6 @@ public class methods {
 
     public static boolean closeToAnother(String input, ArrayList<Movie> list)
     {
-
         String inputlower = input.toLowerCase();
         for(int i = 0; i < list.size(); i++)
         {
@@ -61,7 +44,6 @@ public class methods {
         return possibleMovies;
     }
 
-
     public static Movie getMovieData(String input, ArrayList<Movie> list)
     {
         Movie x = new Movie();
@@ -78,7 +60,7 @@ public class methods {
 
     public static boolean checkType(String a, String b)
     {
-        return a.equals(b); 
+        return (a.equals(b));
     }
 
     public static boolean checkProtag(Movie a, Movie b)
@@ -96,7 +78,24 @@ public class methods {
         return a.getRating().equals(b.getRating());
     }
 
+    public static String getFirstWords(String a)
+    {
+        String[] word = a.split("\\s+");
+        if (word.length < 2) {
+            return word[0];
+        }
+        return word[0] + " " + word[1];
+    }
 
+    public static boolean checkIfSeries(String a, String b)
+    {
+        String aLower = a.toLowerCase();
+        String bLower = a.toLowerCase();
 
-    
+        if(bLower.contains(getFirstWords(aLower)))
+        {
+            return true;
+        }
+        return false;
+    }
 }
