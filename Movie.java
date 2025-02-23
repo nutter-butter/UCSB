@@ -4,11 +4,11 @@ public class Movie
     private String movieName;
     private String director;
     private String protag; //Actor of lead role
-    private String rating;
+    private String rating; //Age Rating
     private String description;
-    private String country;
+    private String country; //Country movie was made
     
-    public Movie(String movieName, String country, String rating, String director, String protag, String description)
+    public Movie(String movieName, String country, String rating, String director, String protag, String description) // Standrard Movie Constructor
     {
         this.movieName = movieName;
         this.country = country;
@@ -18,7 +18,7 @@ public class Movie
         this.description = description;
     }
 
-    public Movie()
+    public Movie() // Empty Movie Constructor
     {
         movieName = "There is no Movie or TV show with that title in the database";
     }
@@ -47,5 +47,9 @@ public class Movie
     public String getRating()
     {
         return rating;
+    }
+
+    public void setMovieName(String movieName) {
+        this.movieName = movieName;
     }
 }

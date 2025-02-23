@@ -18,25 +18,29 @@ public class dataAlgorithm
         for(int i = 0; i < list.size(); i++)
         {
             score = 0;
-            if(list.get(i).getDirector().equals(bestDirector))
+            if(list.get(i).getDirector().equals(bestDirector)) // If director is the same adds 4 points
             {
+                if(list.get(i).getDirector().equals("")) // If there is no director subtracts 4 points
+                {
+                    score =-4; 
+                }
                 score += 4;
             }
-            if(list.get(i).getCountry().equals(bestCountry))
+            if(list.get(i).getCountry().equals(bestCountry)) // If country is the same add 2 points
             {
                 score += 2;
             }
-            if(list.get(i).getRating().equals(bestRating))
+            if(list.get(i).getRating().equals(bestRating)) // If rating is the same adds 2 points
             {
-                score += 3;
+                score += 2;
             }
-            if(list.get(i).getProtag().equals(bestProtag))
+            if(list.get(i).getProtag().equals(bestProtag)) // If protagonist is the same adds 4 points
             {
                 score += 4;
             }
-            if(methods.checkIfSeries(input.getMovieName(), list.get(i).getMovieName()))
+            if(methods.checkIfSeries(input.getMovieName(), list.get(i).getMovieName())) // If director is the same adds 4 points
             {
-                score +=6;
+                score +=10;
             }
             name = list.get(i).getMovieName();
             nameMapScore.put(name, score);
