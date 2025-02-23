@@ -31,6 +31,38 @@ public class csvReader {
 
         return list;
     }
+/*
+    String test = protagsL.get(2);
+        String fixed = "";
+        for(int i = 0; i < test.length(); i++)
+        {
+            if(test.charAt(i) != ',') {
+                fixed += test.charAt(i);
+            }
+            else {
+                break;
+            }
+        }
+ */
+    public ArrayList<String> createList(ArrayList<String> arr) {
+        ArrayList<String> list = new ArrayList<>();
+        for(int i = 0; i < arr.size(); i++) {
+            list.add(createString(arr.get(i)));
+        }
+        return list;
+    }
+    
+    public String createString(String s) {
+        String returnString = "";
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) != ',') {
+                returnString += s.charAt(i);
+            } else {
+                break;
+            }
+        }
+        return returnString;
+    }
 
     private String[] parseCsvLine(String line) {
         ArrayList<String> columns = new ArrayList<>();

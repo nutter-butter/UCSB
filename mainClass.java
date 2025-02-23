@@ -6,24 +6,25 @@ public class mainClass {
 
         csvReader titles = new csvReader(data, 2);
         ArrayList<String> titlesList = titles.getColumn();
+
         csvReader directors = new csvReader(data, 3);
         ArrayList<String> directorsList = directors.getColumn();
+
         csvReader country = new csvReader(data, 5);
         ArrayList<String> countriesList = country.getColumn();
+
         csvReader ratings = new csvReader(data, 8);
         ArrayList<String> ratingsList = ratings.getColumn();
+
         csvReader duration = new csvReader(data, 9);
         ArrayList<String> durationList = duration.getColumn();
+
         csvReader descriptions = new csvReader(data, 11);
         ArrayList<String> descsList = descriptions.getColumn();
+
         csvReader protags = new csvReader(data, 4);
         ArrayList<String> protagsL =  protags.getColumn();
-        //ArrayList<String> protagsList = protags.getColumn(protagsL);
-        csvReader types = new csvReader(data, 1);
-        ArrayList<String> typesList = types.getColumn();
-
-        System.out.println("Cast: " + protagsL.get(2));
-
+        ArrayList<String> protagsList = protags.createList(protagsL);
     } 
 }
 
