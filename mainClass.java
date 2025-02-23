@@ -17,7 +17,8 @@ public class mainClass {
         ArrayList<String> ratingsList = ratings.getColumn();
 
         csvReader duration = new csvReader(data, 9);
-        ArrayList<String> durationList = duration.getColumn();
+        ArrayList<String> durationL = duration.getColumn();
+        ArrayList<String> durationList = duration.createListSpace(durationL);
 
         csvReader descriptions = new csvReader(data, 11);
         ArrayList<String> descsList = descriptions.getColumn();
@@ -25,6 +26,10 @@ public class mainClass {
         csvReader protags = new csvReader(data, 4);
         ArrayList<String> protagsL =  protags.getColumn();
         ArrayList<String> protagsList = protags.createList(protagsL);
+
+        for(String s : durationList) {
+            System.out.println(s);
+        }
     } 
 }
 
