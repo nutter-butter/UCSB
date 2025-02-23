@@ -5,19 +5,15 @@ public class Movie
     String protag; //Actor of lead role
     String rating;
     String description;
-    String type;
     String country;
     
-    public Movie(String movieName, String country, String type, String director, String protag, 
-    //String rating, 
-    String description)
+    public Movie(String movieName, String country, String rating, String director, String protag, String description)
     {
         this.movieName = movieName;
         this.country = country;
         this.director = director;
+        this.rating = rating;
         this.protag = protag;
-       // this.rating = rating;
-        this.type = type;
         this.description = description;
     }
 
@@ -41,10 +37,6 @@ public class Movie
 
     public String getDirector() {
         return director;
-    }
-
-    public String getType() {
-        return type;
     }
 
     public String getDescription() {

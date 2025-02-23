@@ -43,10 +43,9 @@ public class mainClass
                 Movie newMovieA = new Movie(
                     titlesList.get(i), 
                     countriesList.get(i), 
-                    //typesList.get(i), 
+                    ratingsList.get(i), 
                     directorsList.get(i), 
                     protagsList.get(i), 
-                    ratingsList.get(i), 
                     descsList.get(i));
                     movieList.add(newMovieA);
             } 
