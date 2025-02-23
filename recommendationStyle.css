@@ -7,7 +7,7 @@
 .header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgb(137, 2, 2), rgb(199, 0, 0));
+    background-image: linear-gradient(rgb(137, 2, 2), rgb(223, 0, 0));
     position: relative;
 }
 
@@ -22,6 +22,11 @@ nav img {
     width: 150px
 }
 
+p{
+    font-size: 22px;
+    color: white;
+    text-align: center;
+}
 .nav-links {
     flex: 1;
     text-align: right;
@@ -55,4 +60,57 @@ nav img {
 
 .nav-links ul li:hover::after {
     width: 100%;
+}
+
+.numOne {
+    padding-top: 2%;
+    text-align: center;
+    color: white;
+}
+.numOne h1 {
+    font-size: 100px;
+    color: yellow;
+}
+
+.numTwo {
+    padding-left: 6%;
+    text-align: left;
+    color: white;
+}
+
+.numTwo h1 {
+    font-size: 75px;
+    color: purple;
+}
+
+.numThree {
+    padding-right: 6%;
+    text-align: right;
+    color: white;
+}
+
+.numThree h1 {
+    font-size: 75px;
+    color: green;
+}
+.toggle-content {
+    display: none; /* Initially hidden */
+    padding: 10px;
+  }
+
+  .toggle-header {
+    cursor: pointer;
+    color: white;
+  }
+
+  .toggle-header:hover {
+    text-decoration: underline;
+  }
+  
+.numTwo p {
+    text-align: left;
+}
+
+.numThree p {
+    text-align: right;
 }

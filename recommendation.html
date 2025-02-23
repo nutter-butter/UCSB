@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name = "viewport" content = "with=device-width, initial-scale = 1.0">
         <title>NB: Recommendation</title>
         <link rel = "stylesheet" href = "recommendationStyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
+        </head>
     <body>
         <section class = "header">
             <nav>
@@ -19,6 +20,44 @@
                     </ul>
                 </div>
             </nav>
-        </class>
+            <p>Since you like My Little Pony: Friendship Is Magic,</p>
+            <div class = "numOne">
+                <h1>#1</h1>
+                <h2 class = "toggle-header">My Little Pony: Something</h1>
+                <div class = "toggle-content">
+                    <p>Journey to the enchanted land of Equestria, where unicorn Twilight Sparkle and her pals have adventures and learn valuable lessons about friendship.</p>
+                </div>
+            </div>
+            <div class = "numTwo">
+                <h1>#2 </h1>
+                <h2 class = "toggle-header">My Little Pony: Someone</h2>
+                <div class = "toggle-content">
+                    <p>What the sigma what the sigma what the sigma what the sigma what the sigma <br> what the sigma what the sigma what the sigma what the sigma what the sigma.</p>
+                </div>
+            </div>
+            <div class = "numThree">
+                <h1>#3</h1>
+                <h2 class = "toggle-header">Fortnite skibidi rizz</h2>
+                <div class = "toggle-content">
+                    <p>WHAT THE SKIBIDI WHAT THE SKIBIDI WHAT THE SKIBIDI WHAT THE SKIBIDI WHAT THE SKIBIDI WHAT THE SKIBIDI WHAT THE SKIBIDI WHAT THE SKIBIDI WHAT THE SKIBIDI.</p>
+                </div>
+            </div>
+        </section>
     </body>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".toggle-header").forEach(header => {
+        header.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            if (content && content.classList.contains("toggle-content")) {
+                // Toggle the display property without affecting other elements
+                content.style.display = content.style.display === "block" ? "none" : "block";
+            }
+        });
+    });
+});
+
+
+    </script>
 </html>
