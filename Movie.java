@@ -1,55 +1,38 @@
 public class Movie {
 
     String movieName; //Name of movie
-    String genre;
-    String protag; //Actor of lead role
-    double time; //Time in seconds
-    double rating; //Rating from 0-5
-    boolean type;
+    String genre; 
     String director;
-    String description;
+    String protag; //Actor of lead role
+    int time; //Time in seconds
+    String rating; //Rating from 0-5
     
-    public Movie(String movieName, String genre, String director, String protag, double rating, boolean type, double time, String description)
+    public Movie(String movieName, String director, String protag, String rating, int time)
     {
         this.movieName = movieName;
-        this.genre = genre;
+        this.director = director;
         this.protag = protag;
         this.rating = rating;
         this.time = time;
-        this.type = type;
-        this.director = director;
-        this.description = description;
     }
 
     public String getMovieName() {
         return movieName;
     }
 
-    public String getGenre() {
-        return genre;
+    public String getDirector() {
+        return director;
     }
 
     public String getProtag() {
         return protag;
     }
 
-    public double getTime() {
+    public int getTime() {
         return time;
     }
 
-    public double getRating() {
+    public String getRating() {
         return rating;
-    }
-
-    public String getDirector() {
-        return director;
-    }
-
-    public boolean isType() {
-        return type;
-    }
-
-    public String getDescription() {
-        return description;
     }
 }
