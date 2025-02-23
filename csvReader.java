@@ -51,11 +51,31 @@ public class csvReader {
         }
         return list;
     }
-    
+
+    public ArrayList<String> createListSpace(ArrayList<String> arr) {
+        ArrayList<String> list = new ArrayList<>();
+        for(int i = 0; i < arr.size(); i++) {
+            list.add(createStringSpace(arr.get(i)));
+        }
+        return list;
+    }
+
     public String createString(String s) {
         String returnString = "";
         for(int i = 0; i < s.length(); i++) {
             if(s.charAt(i) != ',') {
+                returnString += s.charAt(i);
+            } else {
+                break;
+            }
+        }
+        return returnString;
+    }
+
+    public String createStringSpace(String s) {
+        String returnString = "";
+        for(int i = 0; i < s.length(); i++) {
+            if(s.charAt(i) != ' ') {
                 returnString += s.charAt(i);
             } else {
                 break;
